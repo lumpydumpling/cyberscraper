@@ -3,9 +3,8 @@ from scrapy.linkextractors import LinkExtractor
 
 class CrawlingSpider(CrawlSpider):
     name = "Gerona" #scrapy crawl Gerona
-    # Read start URLs from file
     with open('seed_urls.txt', 'r') as file:
-        start_urls = [url.strip() for url in file.readlines()]
+        start_urls = [url.strip() for url in file.readlines()] # Read start URLs from file
     # Number of pages to crawl
     max_pages = 10
     # Number of levels (hops) away from the seed URLs
