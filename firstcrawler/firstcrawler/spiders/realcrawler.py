@@ -2,7 +2,7 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 
 class CrawlingSpider(CrawlSpider):
-    name = "Jenny" #name of the crawler, command: "scrapy crawl Jenny"
+    name = "Lia" #name of the crawler, command: "scrapy crawl Jenny"
     with open('seed_urls.txt', 'r') as file:
         start_urls = [url.strip() for url in file.readlines()]
     # start_urls = ["https://www.schneier.com/"]  
