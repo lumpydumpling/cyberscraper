@@ -14,7 +14,7 @@ class CrawlingSpider(CrawlSpider):
     with open('seed_urls.txt', 'r') as file:
         start_urls = [url.strip() for url in file.readlines()] # Read start URLs from file
     max_pages = 10000    # Number of pages to crawl
-    max_depth = 6000     # Number of levels (hops) away from the seed URLs
+    max_depth = 60     # Number of levels (hops) away from the seed URLs
     crawled_pages_counter = 0     # Counter for crawled pages
     rules = (
         Rule(LinkExtractor(), callback='parse_item', follow=True),         # Rule: Follow all links and parse the response using parse_item method
@@ -41,9 +41,9 @@ class CrawlingSpider(CrawlSpider):
         # print(text_content)
         # print("")
         
-        # with open('keywords.txt', 'r') as file:
-        #     keywords = [keyword.strip() for keyword in file.readlines()]
-        # if any(keyword in text_content.lower() for keyword in keywords):
+        with open('keywords.txt', 'r') as file:
+            keywords = [keyword.strip() for keyword in file.readlines()]
+        if any(keyword in text_content.lower() for keyword in keywords):
             # for wikipedia pages
             title = response.xpath('//title/text()').get()
             if not title:
