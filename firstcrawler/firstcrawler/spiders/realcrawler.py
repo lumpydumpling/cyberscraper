@@ -2,7 +2,7 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 
 class CrawlingSpider(CrawlSpider):
-    name = "Lia" #name of the crawler, command: "scrapy crawl Jenny"
+    name = "Lia" #name of the crawler, command: "scrapy crawl Lia"
     # with open('seed_urls.txt', 'r') as file:
     #     start_urls = [url.strip() for url in file.readlines()]
     start_urls = ["https://en.wikipedia.org/wiki/GNU_Hurd"]  
@@ -26,7 +26,8 @@ class CrawlingSpider(CrawlSpider):
             self.log("Maximum depth reached for page {}. Stopping.".format(response.url))
             return
         
-        title = response.css("h1::text").get() #FIX HERE
+        #title is text content of span with certain class
+        title = response.xpath('//span[has-class("mw-page-title-main")]/text()').get()
         paragraphs = response.css("p::text").getall() #scrape the article text, exclude title(.entry) and the category and tags
         article_content = ' '.join([p.strip() for p in paragraphs if p.strip()])
         
