@@ -6,22 +6,18 @@ import os
 class CrawlingSpider(CrawlSpider):
     name = "Gerona" #scrapy crawl Gerona
     total_data_size = 0  # Track cumulative size of crawled data
-    max_data_size = 5 * 1024 * 1024  # Maximum data size in bytes (5 MB)
+    max_data_size = 500 * 1024 * 1024  # Maximum data size in bytes (500 MB)
     
     if os.path.exists('scraped_pages'):
         os.system('rm -rf scraped_pages') # Remove the folder and its contents
     
     with open('seed_urls.txt', 'r') as file:
         start_urls = [url.strip() for url in file.readlines()] # Read start URLs from file
-    # Number of pages to crawl
-    max_pages = 10000
-    # Number of levels (hops) away from the seed URLs
-    max_depth = 6
-    # Counter for crawled pages
-    crawled_pages_counter = 0
+    max_pages = 10000    # Number of pages to crawl
+    max_depth = 6000     # Number of levels (hops) away from the seed URLs
+    crawled_pages_counter = 0     # Counter for crawled pages
     rules = (
-        # Rule: Follow all links and parse the response using parse_item method
-        Rule(LinkExtractor(), callback='parse_item', follow=True),
+        Rule(LinkExtractor(), callback='parse_item', follow=True),         # Rule: Follow all links and parse the response using parse_item method
     )
     download_delay = 2  # Set a download delay of 2 seconds to avoid rate limiting
     
@@ -31,7 +27,7 @@ class CrawlingSpider(CrawlSpider):
             return
         
         # Check the depth of the current page
-        depth = response.meta['depth']
+        depth = response.meta['depth'] #When the crawler follows a link and sends a new request to fetch another page, it includes the curr depth as part of the request metadata
         if depth > self.max_depth:
             self.log("Maximum depth reached for page {}. Stopping.".format(response.url))
             return
@@ -45,9 +41,9 @@ class CrawlingSpider(CrawlSpider):
         # print(text_content)
         # print("")
         
-        with open('keywords.txt', 'r') as file:
-            keywords = [keyword.strip() for keyword in file.readlines()]
-        if any(keyword in text_content.lower() for keyword in keywords):
+        # with open('keywords.txt', 'r') as file:
+        #     keywords = [keyword.strip() for keyword in file.readlines()]
+        # if any(keyword in text_content.lower() for keyword in keywords):
             # for wikipedia pages
             title = response.xpath('//title/text()').get()
             if not title:
