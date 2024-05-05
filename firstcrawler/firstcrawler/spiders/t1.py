@@ -30,7 +30,8 @@ class CrawlingSpider(CrawlSpider):
             self.log("Maximum depth reached for page {}. Stopping.".format(response.url))
             return
         
-        title = response.css('h1::text').get() 
+        # for wikipedia pages
+        title = response.xpath('//span[has-class("mw-page-title-main")]/text()').get() 
         if not title:
             title = response.css('h1::text').get()  
         if not title:
@@ -52,6 +53,9 @@ class CrawlingSpider(CrawlSpider):
         if not text_content:
             text_content = ' '.join(response.css('div.article ::text').getall()) 
         
+        cybersecurity_keywords = ['cyber', 'security', 'hacker', 'threat', 'vulnerability']
+        if any(keyword in text_content.lower() for keyword in cybersecurity_keywords):
+            
         output_folder = 'scraped_pages'
         os.makedirs(output_folder, exist_ok=True)
 
@@ -59,7 +63,7 @@ class CrawlingSpider(CrawlSpider):
         filename = os.path.join(output_folder, 'page_{}.txt'.format(self.crawled_pages_counter))
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(f'URL: {response.url}\n')
-            f.write(f'Title: {title}\n')
+            f.write(f'Title: {title.lstrip()}\n')
             f.write(f'Text Content: {text_content}\n')
         
         self.log("Page {} crawled: {}".format(self.crawled_pages_counter, response.url))
