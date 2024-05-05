@@ -5,10 +5,16 @@ import os
 #must be in correct folder, /spiders to access seed_urls
 class CrawlingSpider(CrawlSpider):
     name = "Gerona" #scrapy crawl Gerona
+    total_data_size = 0  # Track cumulative size of crawled data
+    max_data_size = 5 * 1024 * 1024  # Maximum data size in bytes (5 MB)
+    
+    if os.path.exists('scraped_pages'):
+        os.system('rm -rf scraped_pages') # Remove the folder and its contents
+    
     with open('seed_urls.txt', 'r') as file:
         start_urls = [url.strip() for url in file.readlines()] # Read start URLs from file
     # Number of pages to crawl
-    max_pages = 100
+    max_pages = 10000
     # Number of levels (hops) away from the seed URLs
     max_depth = 6
     # Counter for crawled pages
@@ -36,11 +42,16 @@ class CrawlingSpider(CrawlSpider):
         if not text_content:
             text_content = ' '.join(response.css('div.article ::text').getall()) 
         
+        # print(text_content)
+        # print("")
+        
         with open('keywords.txt', 'r') as file:
             keywords = [keyword.strip() for keyword in file.readlines()]
         if any(keyword in text_content.lower() for keyword in keywords):
             # for wikipedia pages
-            title = response.xpath('//span[has-class("mw-page-title-main")]/text()').get() 
+            title = response.xpath('//title/text()').get()
+            if not title:
+                title = response.xpath('//span[has-class("mw-page-title-main")]/text()').get() 
             if not title:
                 title = response.css('h1::text').get()  
             if not title:
@@ -55,7 +66,25 @@ class CrawlingSpider(CrawlSpider):
                 title = last_part.split('-')
                 # Join the title parts with spaces
                 title = ' '.join(title)
-                
+            
+            # removes leading whitespace
+            title = title.lstrip()
+
+            # removes newlines
+            title = title.replace("\n","")
+
+            #removes domain name from title
+            title = title.split(" |")[0]
+            title = title.split(" -")[0]
+            #alternatively, title = re.sub(r' \|.*| -.*', '', title)  # Remove domain names from title
+            # print(title)
+            
+            data_size = len(text_content.encode('utf-8'))  # Convert to bytes; returns the number of bytes required to encode the string in UTF-8
+            self.total_data_size += data_size #accessing the instance variable within the class
+            if self.total_data_size >= self.max_data_size: #explicitly accessing the max_data_size attribute of the current instance of the class CrawlingSpider as opposed to local variables
+                self.log(f"Maximum data size reached. Crawling stopped.")
+                raise CloseSpider("Maximum data size reached")
+        
             output_folder = 'scraped_pages'
             os.makedirs(output_folder, exist_ok=True)
 
@@ -63,8 +92,10 @@ class CrawlingSpider(CrawlSpider):
             filename = os.path.join(output_folder, 'page_{}.txt'.format(self.crawled_pages_counter))
             with open(filename, 'w', encoding='utf-8') as f:
                 f.write(f'URL: {response.url}\n')
-                f.write(f'Title: {title.lstrip()}\n')
+                f.write(f'Title: {title}\n')
                 f.write(f'Text Content: {text_content}\n')
+                f.write(f'Data: {data_size} Bytes \n')
+                f.write(f'total data: {self.total_data_size} Bytes \n')
             
             self.log("Page {} crawled: {}".format(self.crawled_pages_counter, response.url))
             

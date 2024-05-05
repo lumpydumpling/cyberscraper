@@ -12,6 +12,7 @@ BOT_NAME = "firstcrawler"
 SPIDER_MODULES = ["firstcrawler.spiders"]
 NEWSPIDER_MODULE = "firstcrawler.spiders"
 
+# LOG_ENABLED = False
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "firstcrawler (+http://www.yourdomain.com)"

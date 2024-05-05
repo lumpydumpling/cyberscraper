@@ -33,17 +33,17 @@ TCP/IP
 DNS (Domain Name System)
 DHCP (Dynamic Host Configuration Protocol)
 NAT (Network Address Translation)
-Subnet
-Gateway
+subnet
+gateway
 IP Address
 MAC Address
 Ethernet
 Wi-Fi
-Bandwidth
-Latency
-Packet
-Routing
-Routing Table
+bandwidth
+latency
+packet
+routing
+routing table
 OSI Model
 network
 security
