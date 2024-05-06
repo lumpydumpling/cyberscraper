@@ -36,7 +36,7 @@ class CrawlingSpider(CrawlSpider):
         Rule(LinkExtractor(), callback='parse_item', follow=True),         # Rule: Follow all links and parse the response using parse_item method
     )
     download_delay = 2  # Set a download delay of 2 seconds to avoid rate limiting
-
+    allowed_domains = ['wired.com', 'www.ubuntuforums.org', 'shostack.org', 'schneier.com', 'linux.com', 'ubuntu.com', 'freecodecamp.org', 'kali.org', 'csoonline.com', 'medium.com', 'metasploit.com']
     #def print_data_size(self): #print how much data has been collected to a output.txt every 20 min
         #current_time = datetime.now()
         #elapsed_time = (current_time - self.start_time).seconds/60
@@ -78,7 +78,7 @@ class CrawlingSpider(CrawlSpider):
         # Removes newlines and tab characters in text_content
         text_content = text_content.replace('\n', '').replace('\t', '')
 
-        with open('fullkeywords.txt', 'r') as file:
+        with open('handle.txt', 'r') as file:
             keywords = [keyword.strip() for keyword in file.readlines()]
 
         # Only crawl pages that contain keywords related to cybersecurity
@@ -118,7 +118,7 @@ class CrawlingSpider(CrawlSpider):
             
             data_size = len(text_content.encode('utf-8'))  # Convert to bytes; returns the number of bytes required to encode the string in UTF-8
             self.total_data_size += data_size #accessing the instance variable within the class
-            if self.total_data_size >= self.max_data_size: #explicitly accessing the max_data_size attribute of the current instance of the class CrawlingSpider as opposed to local variables
+            if self.total_data_size >= self.max_data_size or self.crawled_pages_counter >= self.max_pages: #explicitly accessing the max_data_size attribute of the current instance of the class CrawlingSpider as opposed to local variables
                 self.log(f"Maximum data size reached. Crawling stopped.")
                 raise CloseSpider("Maximum data size reached")
         
@@ -136,10 +136,10 @@ class CrawlingSpider(CrawlSpider):
                 f.write(f'Found keywords: {found_keyword}')
             
             # Used to output to json
-            yield {
-                "title": title,
-                "content": text_content
-            }
+            # yield {
+            #     "title": title,
+            #     "content": text_content
+            # }
             
             self.log("Page {} crawled: {}".format(self.crawled_pages_counter, response.url))
             

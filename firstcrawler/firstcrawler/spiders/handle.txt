@@ -1,3 +1,4 @@
+cybersecurity
 hacking
 malware
 phishing
@@ -39,3 +40,26 @@ intrusion detection system
 intrusion prevention system
 penetration testing
 vulnerability assessment
+linux 
+ubuntu
+gnome
+file permissions
+ftp
+ssh
+debian
+virtualization
+containerization
+gateway configuration
+proxy configuration
+nginx
+kubernetes
+opsec
+command line interface
+gui
+sudo
+apt-get
+x11vnc
+/home/
+<port>
+mozilla firefox
+chromium
