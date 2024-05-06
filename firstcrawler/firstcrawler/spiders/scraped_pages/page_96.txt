@@ -1,0 +1,6 @@
+URL: https://securityboulevard.com/2018/02/bob-and-alice-meet-the-ultimate-firewall/
+Title: Bob and Alice Meet The Ultimate Firewall
+Text Content: The Home of the Security Bloggers NetworkHomeSecurity Bloggers NetworkNot the Alice and Bob we know running and frolicking along and about various and sundry paths to Security Nirvana, oh no me prtetties, but the Alice and Bob of mathematics, blackholes, paradoxes and whatnot… Examine – if you will – what happens when the pair meet the ultimate firewall – Today’s Must Read.Permalink*** This is a Security Bloggers Network syndicated blog from Infosecurity.US authored by Marc Handelman. Read the original post at: https://www.quantamagazine.org/black-hole-firewalls-confound-theoretical-physicists-20121221/ Secure Coding PracticesStep  of 
+Data: 653 Bytes 
+total data: 847747 Bytes 
+Found keywords: ['firewall', 'firewall', 'firewall']

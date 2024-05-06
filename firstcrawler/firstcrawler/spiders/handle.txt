@@ -1,0 +1,41 @@
+hacking
+malware
+phishing
+ransomware
+firewall
+encryption
+data breach
+cyber attack
+cyber defense
+network security
+information security
+penetration testing
+local area network
+wide area network
+wlan
+wireless local area network
+vpn
+virtual private network
+router
+tcp/ip
+dns
+domain name system
+dhcp 
+dynamic host configuration protocol
+network address translation
+subnet
+gateway
+ip address
+mac address
+ethernet
+network topology
+routing table
+osi model
+spyware
+social engineering
+denial of service
+distributed denial of service
+intrusion detection system
+intrusion prevention system
+penetration testing
+vulnerability assessment

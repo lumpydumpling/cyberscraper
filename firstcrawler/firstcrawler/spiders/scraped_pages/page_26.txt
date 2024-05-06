@@ -1,0 +1,6 @@
+URL: https://securityboulevard.com/downloads/the-state-of-cloud-native-security-2020/
+Title: The State of Cloud Native Security 2020
+Text Content: The Home of the Security Bloggers NetworkHomeCloudThe first annual State of Cloud Native Security report examines the practices, tools and technologies innovative companies are using to manage cloud environments and drive cloud native development. Based on a survey of 3,000 cloud architecture, InfoSec and DevOps professionals across five countries, the report surfaces insights from a proprietary set of well-analyzed data. Charlene O’Hanlon is Chief Operating Officer at Techstrong Group and Editor at Large at Techstrong Media. She is an award-winning journalist serving the technology sector for 20 years as content director, executive editor and managing editor for numerous technology-focused sites including DevOps.com, CRN, The VAR Guy, ACM Queue and Channel Partners. She is also a frequent speaker at industry events and conferences.charlene has 55 posts and counting.See all posts by charleneSecure Coding PracticesStep  of 
+Data: 939 Bytes 
+total data: 315090 Bytes 
+Found keywords: ['architecture', 'data']

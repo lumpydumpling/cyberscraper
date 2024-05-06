@@ -1,0 +1,6 @@
+URL: https://www.linux.com/news/save-up-to-65-on-cyber-monday-deals/
+Title: Cyber Monday Deals Extended Until Dec. 6th!
+Text Content: Elevate your profile. Improve your skills. Showcase your badges. Get significant deals on open source training and certification from Linux Foundation. Deals end December 6, so start saving now!
+Data: 194 Bytes 
+total data: 331878 Bytes 
+Found keywords: ['Linux', 'open source']

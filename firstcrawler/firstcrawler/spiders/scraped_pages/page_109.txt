@@ -1,0 +1,6 @@
+URL: https://www.linuxjournal.com/aboutus
+Title: About Linux Journal
+Text Content:  covers all aspects of the world's most essential operating system and the emerging technologies adjacent to it. Our mission is to deliver a publication that reflects the principled approach followed by kernel developers and the tenets of Open Source philosophy. As the Original Magazine of the Linux Community,  engages with a wide readership--from home automation hobbyists to Free Software advocates to hard-core hackers to high-level systems architects--seeking to explore the trending, timeless and practical in Linux and related technologies. Linux Journal is currently owned by Slashdot Media.  Linux Journal, representing 25+ years of publication, is the original magazine of the global Open Source community.
+Data: 719 Bytes 
+total data: 911605 Bytes 
+Found keywords: ['Linux', 'operating system', 'kernel', 'system']

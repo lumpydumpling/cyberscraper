@@ -1,0 +1,6 @@
+URL: https://www.contrastsecurity.com/security-influencers
+Title: Application Security Blog
+Text Content: Contrast's application security blog provides the latest trends and tips in DevSecOps through instrumentation and security observability.Insight #1 Here we go again: Verizon’s new Data Breach Investigations Report (DBIR) is out, and once again,..Insight #1 AI is clearly becoming a problem, with headlines capturing incidents such as a deepfake audio impersonating..Insight #1 One of the most significant errors an organization can make is assuming they are not a target. This belief..Insight #1 I was at the Kernelcon conference last week and heard that Gen AI is going to wreck development because..Insight #1 A recent report found that security and privacy concerns are holding back the use of artificial intelligence..On Wednesday, March 27, CISA and the FBI issued a cry for help: We need to stamp out SQL injection vulnerabilities, and..Insight #1 According to Google, zero days being exploited in the wild jumped 50% last year. I just don't understand..Insight #1 Things are well and good in the hacker community, as they are now attacking critical water systems. But..It's not just any basketball — it’s a sensor-packed basketball.
+Data: 1145 Bytes 
+total data: 498751 Bytes 
+Found keywords: ['security', 'exploit', 'CIS', 'intelligence', 'exploit', 'system']

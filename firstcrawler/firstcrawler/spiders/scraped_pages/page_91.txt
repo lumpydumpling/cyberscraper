@@ -1,0 +1,6 @@
+URL: https://securityboulevard.com/2018/02/office-365-ransomware/
+Title: Office 365 ransomware
+Text Content: The Home of the Security Bloggers NetworkHomeCybersecurityThreats & BreachesI just came across an article for HelpNet by Jeff Erramouspe (Spanning Cloud) on How to protect Office 365 data from ransomware attacks.Not a technical article, but not bad advice, and I haven’t publicized a how-to article on ransomware for quite a while.“Ransomware, in particular, has introduced significant risks for Office 365 users. Cerber ransomware, for example, targeted Office 365 and flooded end users’ inboxes with an Office document that invoked malware via macros, and the now infamous WannaCry attack was engineered to take advantage of a Microsoft vulnerability. And now we have an even more insidious ransomware strain with ShurL0ckr – designed to evade the built in malware protection on OneDrive and Google Drive.”*** This is a Security Bloggers Network syndicated blog from The AVIEN Blog authored by DHarley. Read the original post at: https://avien.net/blog/office-365-ransomware/ Secure Coding PracticesStep  of 
+Data: 1022 Bytes 
+total data: 836126 Bytes 
+Found keywords: ['malware', 'ransomware', 'vulnerability', 'data', 'malware', 'ransomware', 'vulnerability', 'vulnerability']

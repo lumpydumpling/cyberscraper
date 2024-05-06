@@ -1,0 +1,6 @@
+URL: https://securityboulevard.com/2024/02/enterprise-security-controls-report-proactive-remediation/
+Title: Enterprise Security Controls Report & Proactive Remediation
+Text Content: The Home of the Security Bloggers NetworkHomeSecurity Bloggers NetworkThe State of Enterprise Security Controls report by Veriti Research offers an unprecedented look into the challenges and opportunities facing organizations today. With insights derived from an extensive analysis of over 715 million logs and more than 100 different security controls, this report is your guide to taking your cybersecurity strategy to the next level.Transform your cybersecurity strategy from reactive to proactive. Secure your enterprise’s future by downloading the report today and take the first step towards a more secure tomorrow. *** This is a Security Bloggers Network syndicated blog from VERITI authored by Yair Herling. Read the original post at: https://veriti.ai/downloads/enterprise-security-controls-report-and-proactive-remediation/ Secure Coding PracticesStep  of 
+Data: 868 Bytes 
+total data: 662753 Bytes 
+Found keywords: ['cybersecurity', 'security', 'cybersecurity', 'controls', 'logs']

@@ -1,0 +1,6 @@
+URL: https://securityboulevard.com/2018/02/a-week-in-security-february-19-february-25/
+Title: A week in security (February 19 – February 25)
+Text Content: The Home of the Security Bloggers NetworkHomeCybersecurityGovernance, Risk & ComplianceLast week on Malwarebytes Labs, we gave readers a primer on encryption, took a stab at that Deepfakes tool Internet users seem to be interested in, and started a new series that talks about GDPR.We also looked at a drive-by download campaign that starts in booby-trapped Chinese websites that drop malware via different exploits. This malware is a DDoS bot called Avzhan, which we then studied in detail.Stay safe, everyone!*** This is a Security Bloggers Network syndicated blog from Malwarebytes Labs authored by Malwarebytes Labs. Read the original post at: https://blog.malwarebytes.com/security-world/2018/02/a-week-in-security-february-19-february-25/ Secure Coding PracticesStep  of 
+Data: 779 Bytes 
+total data: 873605 Bytes 
+Found keywords: ['malware', 'encryption', 'malware', 'exploit', 'encryption', 'DDoS', 'exploit', 'encryption']

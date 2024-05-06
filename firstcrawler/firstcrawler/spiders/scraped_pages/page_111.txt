@@ -1,0 +1,6 @@
+URL: https://www.linuxjournal.com/aboutus/tuxgallery
+Title: Tux Gallery
+Text Content: The 3-D Tux images were created by Robert Karlsson using 3D Studio MaxR4.2. Robert is a Swedish student of architecture who also works at i2Studios, a digital design house: http://www.i2studios.com/.To download individual images, click the image format you want todownload, then save the full-size graphic. All images are property of, and are freely availablefor personal use only. Commercial use of the images is not permitted. Ifyou would like further information please send e-mail tomktg@linuxjournal.com.Linux Journal, representing 25+ years of publication, is the original magazine of the global Open Source community.
+Data: 624 Bytes 
+total data: 917587 Bytes 
+Found keywords: ['architecture', 'information']

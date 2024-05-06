@@ -41,6 +41,8 @@ class CrawlingSpider(CrawlSpider):
 #         #article_content = ' '.join([p.strip() for p in paragraphs if p.strip()])
 #         #print(title)
 #         print(article_content)
+        meta_description = response.xpath('//meta[@name="description"]/@content').get()
+
         title = response.css('h1::text').get()  
         paragraphs = response.css(":not(.entry-categories):not(.entry-tags) p::text").getall() #.article > 
         text_content = ' '.join([p.strip() for p in paragraphs if p.strip()])
@@ -48,7 +50,8 @@ class CrawlingSpider(CrawlSpider):
             text_content = ' '.join(response.css('div.article ::text').getall()) 
         yield {
             "title": title,
-            "article": text_content
+            "article": text_content,
+            "meta": meta_description
         }
         # filename = 'page_{}.txt'.format(self.crawled_pages_counter)
         # with open(filename, 'w', encoding='utf-8') as f:

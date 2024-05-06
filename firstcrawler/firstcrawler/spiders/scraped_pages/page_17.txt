@@ -1,0 +1,6 @@
+URL: https://www.redhat.com/en/resources/build-modern-storage-infrastructure
+Title: Build a modern storage infrastructure
+Text Content: As you browse redhat.com, we'll recommend resources you may like. For now, try these.As your organization relies on cloud-native computing to develop, deliver, and manage enterprise applications, data services like data security, governance, discovery, and resiliency become important. Red Hat offers storage and data services and works closely with its storage ecosystem partners to test, certify, and integrate the technologies you need to build more efficient, resilient, and regulatory conformant storage infrastructure. We’re the world’s leading provider of enterprise open source solutions—including Linux, cloud, container, and Kubernetes. We deliver hardened solutions that make it easier for enterprises to work across platforms and environments, from the core datacenter to the network edge.
+Data: 809 Bytes 
+total data: 139326 Bytes 
+Found keywords: ['network', 'network', 'security', 'data', 'Linux', 'open source', 'network', 'test']

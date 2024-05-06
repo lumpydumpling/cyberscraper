@@ -1,0 +1,158 @@
+cybersecurity
+hacking
+malware
+phishing
+ransomware
+firewall
+encryption
+data breach
+vulnerability
+cyber attack
+cyber defense
+network security
+information security
+penetration testing
+authentication
+authorization
+networking
+network
+internet
+LAN 
+Local Area Network
+WAN
+Wide Area Network
+WLAN
+Wireless Local Area Network
+VPN
+Virtual Private Network
+router
+switch
+firewall
+protocol
+TCP/IP
+DNS (Domain Name System)
+DHCP (Dynamic Host Configuration Protocol)
+NAT (Network Address Translation)
+subnet
+gateway
+IP Address
+MAC Address
+Ethernet
+Wi-Fi
+bandwidth
+latency
+packet
+routing
+routing table
+OSI Model
+network
+security
+architecture
+topology
+administrator
+Cybersecurity
+cybersecurity
+information
+data
+cyber attack
+malware
+virus
+trojan
+worm
+ransomware
+spyware
+phishing
+social engineering
+denial of service
+distributed denial of service
+intrusion detection system
+intrusion prevention system
+penetration testing
+vulnerability assessment
+exploit
+patch
+encryption
+decryption
+authentication
+authorization
+access control
+identity management
+security policy
+security incident
+incident response
+security operations center
+threat intelligence
+cyber defense
+Cybersecurity Framework
+NIST
+cybersecurity framework
+CIS
+controls
+Cybersecurity Standards
+ISO 27001
+PCI DSS
+defense
+Defense
+military
+operational
+OPSEC
+physical security
+perimeter security
+surveillance
+intelligence
+counterintelligence
+threat assessment
+risk management
+incident management
+crisis management
+disaster recovery
+business continuity
+threat attack
+monitoring
+detection
+DoS
+DDoS
+IDS
+IPS
+SOC
+Linux
+Ubuntu
+CLI
+operating system
+kernel
+distribution
+open source
+command line interface
+terminal
+bash
+shell
+package manager
+repository
+vulnerability
+exploit
+root access
+permissions
+user account
+group account
+authentication
+encryption
+file
+file system
+file permissions
+firewall
+network
+configuration
+networking
+system
+logs
+monitoring
+administration
+system security
+penetration
+testing
+test
+vulnerability
+assessment
+intrusion
+detection
+prevention
