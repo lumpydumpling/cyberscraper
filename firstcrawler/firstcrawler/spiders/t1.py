@@ -16,14 +16,14 @@ class CrawlingSpider(CrawlSpider):
         self.max_pages = max_pages
         self.max_depth = max_depth
 
-        self.timer_interval = 20 * 60 #planning on writing to an output folder how much data has been collected every 20 minutes
-        self.start_time = datetime.now()
+       # self.timer_interval = 20 * 60 #planning on writing to an output folder how much data has been collected every 20 minutes
+       # self.start_time = datetime.now()
         #if output.txt already exists delete it and rewrite to make a new file
         
-        if os.path.exists("output.txt"):
-         os.system('rm output.txt')
-        self.output_file = open("output.txt", "w")
-        self.output_file.write("Time Elapsed (minutes), Total Megabytes collected\n")
+       # if os.path.exists("output.txt"):
+        # os.system('rm output.txt')
+       # self.output_file = open("output.txt", "w")
+       # self.output_file.write("Time Elapsed (minutes), Total Megabytes collected\n")
     
     if os.path.exists('scraped_pages'):
         os.system('rm -rf scraped_pages') # Remove the folder and its contents
@@ -37,23 +37,23 @@ class CrawlingSpider(CrawlSpider):
     )
     download_delay = 2  # Set a download delay of 2 seconds to avoid rate limiting
 
-    def print_data_size(self): #print how much data has been collected to a output.txt every 20 min
-        current_time = datetime.now()
-        elapsed_time = (current_time - self.start_time).seconds/60
-        output_line = f"{elapsed_time}:{self.total_data_size} {self.crawled_pages_counter}\n" #print time elapsed, total data collected, and total craweld pages to output file
-        self.output_file.write(output_line)
-        self.output_file.flush()
+    #def print_data_size(self): #print how much data has been collected to a output.txt every 20 min
+        #current_time = datetime.now()
+        #elapsed_time = (current_time - self.start_time).seconds/60
+        #output_line = f"{elapsed_time}:{self.total_data_size} {self.crawled_pages_counter}\n" #print time elapsed, total data collected, and total craweld pages to output file
+        #self.output_file.write(output_line)
+        #self.output_file.flush()
 
     def parse_item(self, response):
         if self.crawled_pages_counter >= self.max_pages:
             self.log("Maximum number of pages crawled reached. Stopping.")
             return
         # check if 20 minutes have passed, if yes, write to the output file
-        current_time = datetime.now()
-        elapsed_time = (current_time - self.start_time).seconds
-        if elapsed_time >= self.timer_interval:
-            self.print_data_size()
-            self.start_time = current_time
+        #current_time = datetime.now()
+        #elapsed_time = (current_time - self.start_time).seconds
+        #if elapsed_time >= self.timer_interval:
+            #self.print_data_size()
+            #self.start_time = current_time
 
         # Check the depth of the current page
         depth = response.meta['depth'] #When the crawler follows a link and sends a new request to fetch another page, it includes the curr depth as part of the request metadata
@@ -80,7 +80,6 @@ class CrawlingSpider(CrawlSpider):
 
         with open('fullkeywords.txt', 'r') as file:
             keywords = [keyword.strip() for keyword in file.readlines()]
-
 
         # Only crawl pages that contain keywords related to cybersecurity
         found_keyword = [keyword for keyword in keywords if ' ' + keyword in text_content]
@@ -136,15 +135,21 @@ class CrawlingSpider(CrawlSpider):
                 f.write(f'total data: {self.total_data_size} Bytes \n')
                 f.write(f'Found keywords: {found_keyword}')
             
+            # Used to output to json
+            yield {
+                "title": title,
+                "content": text_content
+            }
+            
             self.log("Page {} crawled: {}".format(self.crawled_pages_counter, response.url))
             
             self.crawled_pages_counter += 1
 
-        def close(self, reason):
+       # def close(self, reason):
 
-            super().close(reason)
+            #super().close(reason)
 
-            self.output_file.write("Spider has finished running.\n")
-            self.output_file.close()
+            #self.output_file.write("Spider has finished running.\n")
+            #self.output_file.close()
 
-            print(f"Spider has finished running for {reason} reason." ) #print to console why it stopped running
+            #print(f"Spider has finished running for {reason} reason." ) #print to console why it stopped running
